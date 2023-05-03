@@ -1,0 +1,18 @@
+#btn-start {
+    padding: 10px 20px 10px 20px;
+    background-color: brown;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+#btn-sim {
+    padding: 10px 20px 10px 20px;
+    background-color: green;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.firstDiv {
+    align-items: center;
+    text-align: center;
+}
