@@ -1,6 +1,10 @@
-#btn-start {
+#btn-start, #btn-info {
     padding: 10px 20px 10px 20px;
     background-color: green;
     color: #FFF;
     text-transform: uppercase;
+}
+
+.info {
+    display: none;
 }

@@ -12,14 +12,14 @@
 //     const el = document.getElementById("btn-start");
 //     el.addEventListener('click', () => handleClick());
     
-//     //Botão troll
-//     //const el = document.getElementById("btn-start");
-//     //el.addEventListener('mouseover', () => {
-//     //    el.style.position = "absolute";
-//     //    el.style.top = `${Math.floor(Math.random() * (window.innerHeight - 20))}px`;
-//     //    el.style.left = `${Math.floor(Math.random() * (window.innerWidth - 40))}px`;
-//     //});
-// });
+//Botão troll
+const el = document.getElementById("btn-start");
+    el.addEventListener('mouseover', () => {
+    el.style.position = "absolute";
+    el.style.top = `${Math.floor(Math.random() * (window.innerHeight - 20))}px`;
+    el.style.left = `${Math.floor(Math.random() * (window.innerWidth - 40))}px`;
+    });
+//});
 
 const handleClick = () => {
     const body = $("body");
@@ -32,9 +32,13 @@ const handleClick = () => {
     body.css("color", "#FFF")
 };
     
+const startButtonInit = () => {
+    startButtonInit();
+}
+
     $(document).ready(() => {
     const el = $("btn-start");
-    el.on('click', () => handleClick());
+   el.on('click', () => handleClick());
 });
 
     $(document).ready(() => {
@@ -49,4 +53,23 @@ const handleClick = () => {
             `${Math.floor(Math.random() * (window.innerWidth - 40))}px`);
     });
     el.on('click', () => handleClick());
+});
+
+const infoButtonInit = () => {
+    const el = $("#btn-info");
+    const elInitialText = el.html();
+    el.on("click", () => {
+        if (el.html() == elInitialText) {
+            el.html('Ocultar Inforamações');
+        } else {
+            el.html(elInitialText);
+        }
+
+        $(".info").toggle();
+    });
+}
+
+$(document).ready(() => {
+    startButtonInit();
+    infoButtonInit();
 });
